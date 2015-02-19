@@ -9,7 +9,7 @@ def groups
   }
 end
 
-task :chat do
+task :slackbot_chat do
   Slackbot.setup(groups['lunch'], :group, [Slackbot::Strategy::Hungry])
   chat = Slackbot::Chatter.new
   chat.run
